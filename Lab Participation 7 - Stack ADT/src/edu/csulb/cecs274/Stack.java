@@ -4,12 +4,13 @@ import java.util.Random;
 
 public class Stack {
 
-	private Random r = new Random();
+	//private Random r = new Random();
 	Interface ui = new Interface();
 	private int maximumStackSize = 50;
-	private Card topCard;
+	//private Card topCard;
 	private int stackSize;
 	private Card deck[] = new Card[maximumStackSize];
+	
 	
 	
 	public Stack()
@@ -51,13 +52,38 @@ public class Stack {
 		}
 	}
 	
-	public Card generateCard()
+	/*public Card generateCard()
 	{
-		int n = r.nextInt(13) + 1;
+		int n = r.nextInt(12) + 1;
 		int s = r.nextInt(3);
 		Card x = new Card(s,n);
+		/*for (int i = 0; i < deck.length; i++)
+		{
+			Card test = new Card(s,n);
+			
+			try
+			{
+				if (deck[i].getRank().equals(test.getRank()) && deck[i].getSuit().equals(test.getSuit()))
+				{
+					while(deck[i].getRank().equals(test.getRank()) && deck[i].getSuit().equals(test.getSuit()))
+					{
+						n = r.nextInt(13) + 1;
+						s = r.nextInt(3);
+						test = new Card(s,n);
+					}
+					
+				}
+			}
+			catch (NullPointerException e)
+			{
+				continue;
+			}
+			
+		}
+		
+		push(x);
 		return x;
-	}
+	}*/
 	
 	
 }
