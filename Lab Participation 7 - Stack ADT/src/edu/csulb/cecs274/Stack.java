@@ -5,7 +5,7 @@ import java.util.Random;
 public class Stack {
 
 	//private Random r = new Random();
-	Interface ui = new Interface();
+	Interface ui = new Interface(); 
 	private int maximumStackSize = 50;
 	//private Card topCard;
 	private int stackSize;
