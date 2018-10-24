@@ -41,8 +41,21 @@ public class Queue {
 	{
 		if (head.next == tail)
 		{ 
-			throw new NoSuchElementException("E")
+			throw new NoSuchElementException("Not enough links for chain");
 		}
+		char x = head.data;
+		if (head.next.next == tail)
+		{
+			head = tail;
+			head.next = new Node();
+			tail = head.next;
+		}
+		else
+		{
+			head = head.next;
+		}
+		
+		return x;
 		
 	}
 	

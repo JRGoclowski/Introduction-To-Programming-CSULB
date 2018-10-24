@@ -27,15 +27,35 @@ public class Numeral {
 		
 	}
 	
-	private String toRoman()
+	private void convertToStack()
+	{
+		
+	}
+	
+	private void convertToQueue()
+	{
+		
+	}
+	private String toRomanStack()
 	{
 		return "I";
 	}
 	
-	private int toArabic()
+	private int toArabicStack()
 	{
 		return 1;
 	}
+	
+	private String toRomanQueue()
+	{
+		return "I";
+	}
+	
+	private int toArabicQueue()
+	{
+		return 1;
+	}
+	
 	
 	public String getNumString() {
 		return numString;
