@@ -8,25 +8,33 @@ public class RecursionRunner {
 	//Runs the methods properly
 	public static void main(String[] args)
 	{
-		int x = 0;
-		boolean happyValue = false;
-		Interface ui = new Interface();
-		ui.println("Please input a positive integer");
-		x = ui.intIn();
-		while (x <= 0)
+		while(true)
 		{
-			ui.println("Please input a positive integer.");
+			int x = 0;
+			boolean happyValue = false;
+			Interface ui = new Interface();
+			ui.println("Please input a positive integer");
 			x = ui.intIn();
+			while (x <= 0)
+			{
+				ui.println("Please input a positive integer.");
+				x = ui.intIn();
+			}
+			happyValue = CheckHappy(x);
+			if (happyValue)
+			{
+				ui.println("");
+				ui.println(x + " is a happy number");
+			}
+			else
+			{
+				ui.println("");
+				ui.println(x + " is not a happy number");
+			}
+			
+			ui.println("");
 		}
-		happyValue = CheckHappy(x);
-		if (happyValue)
-		{
-			ui.println(x + " is a happy number");
-		}
-		else
-		{
-			ui.println(x + " is not a happy number");
-		}
+		
 	}
 	
 	public static int SplitNumber(int x)
