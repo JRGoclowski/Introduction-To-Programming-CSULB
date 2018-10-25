@@ -45,7 +45,9 @@ public class RecursionRunner {
 		}
 		else
 		{
-			return (SplitNumber(x/10) + /*This section adds the remainder to whatever values come out when recurssion ends*/ (x%10)*(x%10));
+			return (SplitNumber(x/10) + 
+					/*This section adds the remainder to whatever 
+					 * values come out when recurssion ends*/ (x%10)*(x%10));
 			
 		}
 		
