@@ -29,12 +29,20 @@ public class Numeral {
 	
 	private void convertToStack()
 	{
-		
+		numStack = new Stack();
+		for (int i = numChar.length; i > 0; i++)
+		{
+			numStack.push(numChar[i]);
+		}
 	}
 	
 	private void convertToQueue()
 	{
-		
+		numQueue = new Queue(numChar.length);
+		for (int i = 0; i < numChar.length; i++)
+		{
+			numQueue.enqueue(numChar[i]);
+		}
 	}
 	private String toRomanStack()
 	{

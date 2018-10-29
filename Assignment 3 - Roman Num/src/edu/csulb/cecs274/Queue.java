@@ -1,75 +1,74 @@
 package edu.csulb.cecs274;
 
-import java.util.*;
+import java.util.NoSuchElementException;
 
 public class Queue {
-	Node head, tail;
 	
-	public Queue()
+	int headIndex,tailIndex;
+	char[] queueArray;
+	
+	
+	public Queue(int size)
 	{
-		head = new Node();
-		head.next = new Node();
-		tail = head.next;
+		queueArray = new char[size];
+		headIndex = 0;
+		tailIndex = 0;
 	}
 	
-	public char headCharacter()
+	
+	public char head()
 	{
 		if (!isEmpty())
 		{
-			return head.data;
+			return queueArray[headIndex];
 		}
-		else 
+		else
 		{
 			throw new NoSuchElementException("No Head Character Exception");
 		}
+		
 	}
 	
-	public char nextCharacter()
+	public char peek()
 	{
-		if (head.next == tail)
+		if (headIndex == tailIndex)
 		{
 			throw new NoSuchElementException("No Next Character");
 		}
 		else
 		{
-			return head.next.data;
+		return queueArray[headIndex + 1];
 		}
 		
 	}
 	
 	public char dequeue()
 	{
-		if (head.next == tail)
-		{ 
-			throw new NoSuchElementException("Not enough links for chain");
-		}
-		char x = head.data;
-		if (head.next.next == tail)
+		if (headIndex == tailIndex)
 		{
-			head = tail;
-			head.next = new Node();
-			tail = head.next;
+			throw new NoSuchElementException("Array Underflow");
 		}
-		else
-		{
-			head = head.next;
-		}
-		
+		char x = queueArray[headIndex];
+		headIndex++;
 		return x;
 		
 	}
 	
-	public void addToQueue(char addition)
+	public void enqueue(char addition)
 	{
-		tail.data = addition;
-		tail.next = new Node();
-		tail = tail.next;
-		
+		queueArray[++tailIndex] = addition;
 	}
 	
 	public boolean isEmpty()
 	{
-		return head.next == tail;
+		if (headIndex == tailIndex)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 }

@@ -9,15 +9,32 @@ public class Main {
 		
 		while(true)
 		{
-			ui.print("Please input Roman Numeral : ");
-			Numeral a = new Numeral(ui.input());
+			ui.print("Please input array length : ");
 			ui.println("");
-			ui.println(a.getNumString());
-			for (int i = 0; i < a.getNumCharArray().length; i++)
+			int x = ui.intIn();
+			Queue q = new Queue(x);
+			boolean continueBool = true;
+			while (continueBool)
 			{
-				ui.println(a.getNumChar(i));
+				ui.print("Input desired character addition : ");
+				char y = ui.charIn();
+				q.enqueue(y);
+				ui.println("Add another?y/n");
+				String answer = ui.input();
+				if (answer.equals("y"))
+				{
+					continue;
+				}
+				else
+				{
+					break;
+				}
 			}
-			
+			ui.println(q.head());
+			for (int i = 0; i < q.tailIndex; i++) 
+			{
+				ui.println(q.dequeue());
+			}
 			
 					
 		}

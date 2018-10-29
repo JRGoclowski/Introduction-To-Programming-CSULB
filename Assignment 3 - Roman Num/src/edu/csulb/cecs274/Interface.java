@@ -68,6 +68,12 @@ public class Interface {
 		}*/
 	}
 	
+	public char charIn()
+	{
+		char x = s.next().charAt(0);
+		return x;
+	}
+	
 	//System.out.println short hand
 		public void print(String output)
 		{
