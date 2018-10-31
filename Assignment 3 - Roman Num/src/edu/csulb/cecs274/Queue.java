@@ -12,7 +12,7 @@ public class Queue {
 	{
 		queueArray = new char[size];
 		headIndex = 0;
-		tailIndex = 0;
+		tailIndex = 1;
 	}
 	
 	
@@ -29,6 +29,9 @@ public class Queue {
 		
 	}
 	
+	
+
+
 	public char peek()
 	{
 		if (headIndex == tailIndex)
@@ -44,10 +47,10 @@ public class Queue {
 	
 	public char dequeue()
 	{
-		if (headIndex == tailIndex)
+		/*if (headIndex == tailIndex)
 		{
 			throw new NoSuchElementException("Array Underflow");
-		}
+		}*/
 		char x = queueArray[headIndex];
 		headIndex++;
 		return x;
@@ -69,6 +72,15 @@ public class Queue {
 		{
 			return false;
 		}
+	}
+	
+	public int getHeadIndex() {
+		return headIndex;
+	}
+
+
+	public int getTailIndex() {
+		return tailIndex;
 	}
 	
 }

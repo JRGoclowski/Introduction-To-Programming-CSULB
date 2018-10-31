@@ -6,8 +6,17 @@ public class Main {
 	
 	public static void main(String args[])
 	{
-		
 		while(true)
+		{
+			ui.print("Please input A, B, Or C : ");
+			ui.println("");
+			String[] list = new String["A","B","C"];
+			String x = ui.stringIn([]);
+			String response = new String(new char[x]).replace('\0', 'V');
+			ui.print(response);
+		}
+		
+		/*while(true)
 		{
 			ui.print("Please input array length : ");
 			ui.println("");
@@ -31,12 +40,12 @@ public class Main {
 				}
 			}
 			ui.println(q.head());
-			for (int i = 0; i < q.tailIndex; i++) 
+			for (int i = 0; i < q.tailIndex +1; i++) 
 			{
 				ui.println(q.dequeue());
 			}
 			
 					
-		}
+		}*/
 	}
 }

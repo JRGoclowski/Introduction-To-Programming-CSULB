@@ -22,11 +22,11 @@ public class Interface {
 		String response = s.next();
 		while (!Arrays.asList(a).contains(response))
 		{
-			print("That is not an acceptable input.");
-			print("Please input one of the following options:");
+			println("That is not an acceptable input.");
+			println("Please input one of the following options:");
 			for (int i = 0; i < a.length; i++)
 			{
-				print(a[i]);
+				print(a[i] + ", ");
 			}
 			response = s.next();
 		}
@@ -53,7 +53,7 @@ public class Interface {
 					exception)
 			{
 			  s.next();
-			  print("This is not an integer");
+			  print("This is not an integer. Please input an integer");
 			}
 
 		}

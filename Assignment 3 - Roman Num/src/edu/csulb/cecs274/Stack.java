@@ -36,6 +36,14 @@ public class Stack {
 		}
 	}
 	
+	public int getStackSizeInt() {
+		return stackSizeInt;
+	}
+
+	public void setStackSizeInt(int stackSizeInt) {
+		this.stackSizeInt = stackSizeInt;
+	}
+
 	public char pop()
 	{
 		if (stackSizeInt < 0)
