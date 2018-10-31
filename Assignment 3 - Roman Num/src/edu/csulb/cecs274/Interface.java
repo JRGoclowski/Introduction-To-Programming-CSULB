@@ -19,7 +19,7 @@ public class Interface {
 	//if the input is not one of the desired inputs
 	public String stringIn(String[] a)
 	{
-		String response = s.next();
+		String response = s.next().toUpperCase();
 		while (!Arrays.asList(a).contains(response))
 		{
 			println("That is not an acceptable input.");
@@ -90,6 +90,10 @@ public class Interface {
 			System.out.println(output);
 		}
 		
+		public void println(int output)
+		{
+			System.out.println(output);
+		}
 
 	
 

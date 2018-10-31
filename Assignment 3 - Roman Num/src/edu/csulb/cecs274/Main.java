@@ -6,46 +6,47 @@ public class Main {
 	
 	public static void main(String args[])
 	{
+		
+		
 		while(true)
 		{
-			ui.print("Please input A, B, Or C : ");
-			ui.println("");
-			String[] list = new String["A","B","C"];
-			String x = ui.stringIn([]);
-			String response = new String(new char[x]).replace('\0', 'V');
-			ui.print(response);
+			
 		}
-		
-		/*while(true)
-		{
-			ui.print("Please input array length : ");
+		/*{
+			ui.print("Please input a roman numeral : ");
+			String number = ui.input();
+			Numeral test = new Numeral(number);
 			ui.println("");
-			int x = ui.intIn();
-			Queue q = new Queue(x);
-			boolean continueBool = true;
-			while (continueBool)
+			if (test.isValid())
 			{
-				ui.print("Input desired character addition : ");
-				char y = ui.charIn();
-				q.enqueue(y);
-				ui.println("Add another?y/n");
-				String answer = ui.input();
-				if (answer.equals("y"))
-				{
-					continue;
-				}
-				else
-				{
-					break;
-				}
+				ui.println("Valid numeral");
 			}
-			ui.println(q.head());
-			for (int i = 0; i < q.tailIndex +1; i++) 
+			else
 			{
-				ui.println(q.dequeue());
+				ui.println("Not a Valid numeral");
 			}
 			
-					
+		}
+		/*{
+			ui.println("Would you like to (A)dd, (S)ubtract, or (M)ultiply?");
+			ui.print("Please input the character in parenthesis of desired operation : ");
+			String a[] = new String[] {"A","S","M"};
+			String operationChoise = ui.stringIn(a);
+			ui.print("Please input the first Roman Numeral : ");
 		}*/
+		
+	}
+	
+	public int operations(String choice, Numeral firstNumeral, Numeral secondNumeral)
+	{
+		int answer;
+		switch(choice)
+		{
+		case "A":
+			answer = firstNumeral.getValueInt() + secondNumeral.getValueInt();
+			
+		}
+		
+		return 1;
 	}
 }
